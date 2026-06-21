@@ -39,7 +39,7 @@ pipeline {
               steps {
                   sshagent([SSH_KEY]) {
                         sh """
-                            scp -o StrictHostKeyChecking=no jenkins-practice/index.html ${USER}@${SERVER_IP}:${REMOTE_DIR}
+                            scp -o StrictHostKeyChecking=no index.html ${USER}@${SERVER_IP}:${REMOTE_DIR}
                         """
                     }
                 }
